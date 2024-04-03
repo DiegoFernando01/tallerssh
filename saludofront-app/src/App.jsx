@@ -17,6 +17,7 @@ const HELLO_QUERY = gql`
   query Hello($message: String!) {
     hello(message: $message)
     aboutMarcelo
+    aboutSebas
   }
 `;
 
@@ -49,6 +50,7 @@ function Hello() {
       </Form>
       {data && <h2 className="mt-3">{data.hello}</h2>}
       {data && <h3 className="mt-3">{data.aboutMarcelo}</h3>}
+      {data && <h3 className="mt-3">{data.aboutSebas}</h3>}
     </div>
   );
 }
